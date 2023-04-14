@@ -8,21 +8,15 @@ mvn clean build
 
 ## Running the app
 
-### To split a file into N number of lines
+java -cp FileSplitter-1.0.jar utils.FileSplitter <filepath> <numLines> <lineSep(optional)>
 
-java -jar FileSplitter-1.0.jar utils.FileSplitter <filename> <numLines> <lineSep(optional)>
+#### Example: splits a file into N number of lines  
 
-#### Example
+java -cp FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000
 
-java -jar FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000
+### splits a file into N number of lines with custom line separator
 
-### To split a file into N number of lines with custom line separator
+java -cp FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\n\n"
 
-java -jar FileSplitter-1.0.jar utils.FileSplitter <filename> <numLines> <lineSep>
-
-#### Example
-
-java -jar FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\n\n"
-
-java -jar FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\n-------------------------------------------------\n"
+java -cp FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\n-------------------------------------------------\n"
 
