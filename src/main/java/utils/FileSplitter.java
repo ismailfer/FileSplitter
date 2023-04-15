@@ -103,7 +103,7 @@ public class FileSplitter
 
 
     public static void printUsage() {
-        System.out.println("Usage: \n     FileSplitter.class.getSimpleName() +  <filename> <numLines> <lineSep>");
+        System.out.println("Usage: \n     FileSplitter <filename> <numLines> <lineSep>");
         System.out.println("   Example:   FileSplitter mylogfile-20230301.log 100000");
         System.out.println("   Example:   FileSplitter mylogfile-20230301.log 100000 \"\\n\\n\"");
     }
