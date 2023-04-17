@@ -63,7 +63,8 @@ public class FileSplitter
                 }
 
                 // open new one
-                String outputPath = dir + "/" + filenameWithNoExt + "-" + StringUtil.zeros(fileOutCount, 3) + "." + filenameExt;
+                String outputPath = (dir.trim().length() > 0) ? dir + "/" : "";
+                outputPath += filenameWithNoExt + "-" + StringUtil.zeros(fileOutCount, 3) + "." + filenameExt;
                 fout = new FileOutputStream(outputPath, false);
                 bout = new BufferedWriter(new OutputStreamWriter(fout));
 

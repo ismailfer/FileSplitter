@@ -30,6 +30,7 @@ target/
 mvnw
 mvnw.cmd
 
+*.log
 
 ### NetBeans ###
 /nbproject/private/

@@ -4,11 +4,11 @@ Ideal for log file splitting
 
 ## Build
 
-mvn clean build
+mvn clean package
 
 ## Running the app
 
-java -cp FileSplitter-1.0.jar utils.FileSplitter <filepath> <numLines> <lineSep(optional)>
+java -cp FileSplitter-1.0.jar utils.FileSplitter <filename> <numLines> <lineSep(optional)>
 
 #### Example: splits a file into N number of lines  
 
