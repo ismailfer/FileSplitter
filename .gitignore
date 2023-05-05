@@ -31,6 +31,8 @@ mvnw
 mvnw.cmd
 
 *.log
+*.bat
+*.sh
 
 ### NetBeans ###
 /nbproject/private/
