@@ -33,7 +33,7 @@ public class DirCopyApp
             System.out.println("Started copying [" + srcDir + "] to [" + targetDir + "] ....");
             System.out.println("This may take a while.. please wait...");
 
-            int filesCount = FileUtil.copyDir(srcDir, targetDir);
+            int filesCount = FileUtil.copyDir(srcDir, targetDir, false);
 
             tick = System.currentTimeMillis() - tick;
 

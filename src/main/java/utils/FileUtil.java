@@ -221,7 +221,7 @@ public class FileUtil {
      */
     public static int copyDir(String pSourceFolder, String pDestinationFolder) throws IOException
     {
-        return copyDir(new File(pSourceFolder), pDestinationFolder);
+        return copyDir(new File(pSourceFolder), pDestinationFolder, true);
     }
 
     /**
@@ -229,8 +229,21 @@ public class FileUtil {
      *
      * @param d the directory to delete
      */
-    public static int copyDir(File d, String pDestinationFolder) throws IOException
+    public static int copyDir(String pSourceFolder, String pDestinationFolder, boolean pQuite) throws IOException
     {
+        return copyDir(new File(pSourceFolder), pDestinationFolder, pQuite);
+    }
+
+    /**
+     * Copy a directory and its content to a new location
+     *
+     * @param d the directory to delete
+     */
+    public static int copyDir(File d, String pDestinationFolder, boolean pQuite) throws IOException
+    {
+        if (pQuite == false)
+            System.out.println("copyDir [" + d.getAbsolutePath() + "]");
+
         int fileCount = 0;
 
         if (d.isDirectory() == false)
@@ -259,7 +272,7 @@ public class FileUtil {
 
             if (f.isDirectory())
             {
-                fileCount += copyDir(f, destination);
+                fileCount += copyDir(f, destination, pQuite);
             }
             // if this is a file
             else
