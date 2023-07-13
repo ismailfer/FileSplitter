@@ -20,3 +20,9 @@ java -cp FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\
 
 java -cp FileSplitter-1.0.jar utils.FileSplitter mylogfile-20230301.log 10000 "\n-------------------------------------------------\n"
 
+### copying directories and its content
+
+java -cp FileSplitter-1.0.jar utils.DirCopyApp <source dir> <target dir>
+
+
+
